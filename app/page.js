@@ -17,15 +17,15 @@ const page = () => {
     copytask.splice(i, 1);
     setMainTask(copytask);
   };
-  const deleteAllHandler = () => {
-    setMainTask([]);
-  };
-  const updateHandler = (i) => {
-    let copytask = [...mainTask];
-    copytask[i].title = title;
-    copytask[i].desc = desc;
-    setMainTask(copytask);
-  };
+  // const deleteAllHandler = () => {
+  //   setMainTask([]);
+  // };
+  // const updateHandler = (i) => {
+  //   let copytask = [...mainTask];
+  //   copytask[i].title = title;
+  //   copytask[i].desc = desc;
+  //   setMainTask(copytask);
+  // };
   let renderTask = <h2>No Task Available</h2>;
   if (mainTask.length > 0) {
     renderTask = mainTask.map((t, i) => {
@@ -83,12 +83,12 @@ const page = () => {
       <hr />
       <div className="p-8 bg-slate-200">
         <ul>{renderTask}</ul>
-        <button
+        {/* <button
           className="bg-red-400 text-white px-4 py-2 rounded font-bold cursor-pointer"
           onClick={{ deleteAllHandler }}
         >
           Delete All
-        </button>
+        </button> */}
       </div>
     </>
   );
